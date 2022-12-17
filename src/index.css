@@ -6,6 +6,9 @@
   --color-primary-text: #212121;
   --color-secondary-text: #e6dddd;
   --color-stats: #fff6f6;
+  --color-green: #28cf44;
+  --color-blue: rgb(150, 144, 243);
+  --color-red: #f80101;
 }
 
 * {
@@ -28,6 +31,20 @@ code {
     monospace;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/* Класс для обнуления базовых свойств у списков (ul) */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Стили для обнуления верхних отступов у элементов */
 h1,
 h2,
 h3,
@@ -35,15 +52,24 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-ul,
-ol {
-  margin: 0;
-  padding: 0;
+
+/* Класс для обнуления базовых свойств у ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
 }
+
+/* Свойства для корректного отображения картинок */
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+}
+
+/* Свойства для обнуления курсива у address */
+address {
+  font-style: normal;
 }
