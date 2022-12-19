@@ -7,7 +7,7 @@
   --color-secondary-text: #e6dddd;
   --color-stats: #fff6f6;
   --color-green: #28cf44;
-  --color-blue: rgb(150, 144, 243);
+  --color-blue: #9690f3;
   --color-red: #f80101;
 }
 
@@ -22,8 +22,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  background-color: var(--color-secondary-text);
 }
 
 code {

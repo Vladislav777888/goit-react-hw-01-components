@@ -1,6 +1,17 @@
 import PropTypes from 'prop-types';
-import css from './Profile.module.css';
-import { getFormatNumber } from '../../utils/getFormatNumber';
+// import css from './Profile.module.css';
+import { getFormatNumber } from 'utils';
+import {
+  Container,
+  Description,
+  Avatar,
+  Name,
+  Tag,
+  Location,
+  Stats,
+  Label,
+  Quantity,
+} from './Profile.styled';
 
 export const Profile = ({
   username,
@@ -10,29 +21,29 @@ export const Profile = ({
   avatar,
 }) => {
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <img src={avatar} alt="User avatar" className={css.avatar} />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
+    <Container>
+      <Description>
+        <Avatar alt="User avatar" src={avatar} />
+        <Name>{username}</Name>
+        <Tag>`@{tag}`</Tag>
+        <Location>{location}</Location>
+      </Description>
 
-      <ul className={css.stats}>
+      <Stats>
         <li>
-          <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{getFormatNumber(followers)}</span>
+          <Label>Followers</Label>
+          <Quantity>{getFormatNumber(followers)}</Quantity>
         </li>
         <li>
-          <span className={css.label}>Views</span>
-          <span className={css.quantity}>{getFormatNumber(views)}</span>
+          <Label>Views</Label>
+          <Quantity>{getFormatNumber(views)}</Quantity>
         </li>
         <li>
-          <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{getFormatNumber(likes)}</span>
+          <Label>Likes</Label>
+          <Quantity>{getFormatNumber(likes)}</Quantity>
         </li>
-      </ul>
-    </div>
+      </Stats>
+    </Container>
   );
 };
 
